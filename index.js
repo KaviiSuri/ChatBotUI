@@ -3,14 +3,14 @@ const proceedBtn = document.getElementById('proceed')
 const states = []
 
 addStateBtn.addEventListener('click', () => {
-    const newState = new State(states.length)
+    const newState = new State(states.length + 1)
     states.push(newState)
 })
 
 proceedBtn.addEventListener('click', () => {
     const data = {}
-    states.forEach((S, i) => {
-        data[`S${i}`] = S.extractData()
+    states.forEach((S) => {
+        data[`S${S.Sindex}`] = S.extractData()
     })
     console.log(data)
 })

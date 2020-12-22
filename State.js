@@ -23,15 +23,15 @@ class State {
         document.getElementById('states').appendChild(this.el)
     }
     addTransition = () => {
-        const newTrans = new Transition(this.Sindex, this.transitions.length)
+        const newTrans = new Transition(this.Sindex, this.transitions.length + 1)
         this.transitions.push(newTrans)
         this.el.appendChild(newTrans.render())   
     }
 
     extractData() {
         let data ={}
-        this.transitions.forEach((T, i) => {
-            data[`T${i}`] = T.data
+        this.transitions.forEach((T) => {
+            data[`T${T.Tindex}`] = T.data
         })
         return data
     }
