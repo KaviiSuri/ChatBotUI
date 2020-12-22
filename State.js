@@ -31,7 +31,7 @@ class State {
     extractData() {
         let data ={}
         this.transitions.forEach((T) => {
-            data[`T${T.Tindex}`] = T.data
+            data[`T${T.Tindex}`] = T.extractData()
         })
         return data
     }

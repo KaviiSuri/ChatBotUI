@@ -56,4 +56,9 @@ class Transition {
         document.getElementById('form-modal').style.display = 'none'
         // e.target.style.display = 'none'
     }
+    extractData () {
+        const data =  JSON.parse(JSON.stringify(this.data));
+        data.keywords = data.keywords.split(',').map(keyword =>  keyword.trim())
+        return data
+    }
 }
