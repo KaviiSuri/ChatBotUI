@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button id="add-state">Add State</button>
-    <div id="states"></div>
+    <div class="container">
+      <div class="control-btns">
+        <button id="add-state">Add State</button>
+        <button id="proceed">Proceed</button>
+      </div>
+      <div id="states"></div>
+    </div>
     <div id="form-modal">
       <form id="input-form">
         <h2>Please Select a Transition to Add</h2>
+        <label for="greet">Greet</label>
+        <input type="text" name="greet" id="greet" placeholder="Greeting" />
         <input type="text" name="message" id="message" placeholder="Message" />
         <input
           type="text"
@@ -33,11 +40,10 @@
           id="transitionState"
           placeholder="Transition State"
         />
-        <input type="text" name="type" id="type" placeholder="type" />
+        <input type="text" name="type" id="type" placeholder="Type" />
         <button type="submit">Submit</button>
       </form>
     </div>
-    <button id="proceed">Proceed</button>
     <script src="Transition.js"></script>
     <script src="State.js"></script>
     <script src="index.js"></script>

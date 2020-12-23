@@ -10,6 +10,7 @@ class State {
         this.el.id = this.id;
         this.el.classList.add('state')
         const header = document.createElement('div')
+        header.classList.add('state-head')
         const heading = document.createElement('h1')
         heading.innerText = `State ${this.Sindex}`
         header.appendChild(heading)

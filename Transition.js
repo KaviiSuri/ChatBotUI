@@ -4,6 +4,7 @@ class Transition {
         this.Tindex = Tindex
         this.id = `S${this.Sindex}-T${this.Tindex}`
         this.data = {
+            greet: "",
             message: "",
             keywords: "",
             end: '',
@@ -17,6 +18,7 @@ class Transition {
         const transBtn = document.createElement('button')
         transBtn.innerHTML = `Transition ${this.Tindex}`
         transBtn.id = this.id
+        transBtn.classList.add('trans')
         transBtn.addEventListener('click', this.onClick)
         return transBtn
     }
