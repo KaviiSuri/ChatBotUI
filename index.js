@@ -11,7 +11,7 @@ addStateBtn.addEventListener('click', () => {
 
 proceedBtn.addEventListener('click', () => {
     const data = {
-        greeting_message: greetingInp.value.trim()
+        greet_value: greetingInp.value.trim()
     }
     states.forEach((S) => {
         data[`S${S.Sindex}`] = S.extractData()
