@@ -1,7 +1,18 @@
+/* Define the "system" font family */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"),
+    local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"),
+    local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "system";
 }
 
 body {
@@ -21,6 +32,13 @@ button {
   border-radius: 10px;
   margin: 10% auto;
   max-width: 800px;
+}
+
+/* Inline #1 | http://localhost:5500/ */
+
+#input-form label {
+  font-weight: bold;
+  color: rgb(85, 85, 85);
 }
 
 #form-modal {
