@@ -1,5 +1,7 @@
 const addStateBtn = document.getElementById('add-state')
 const proceedBtn = document.getElementById('proceed')
+const greetingInp = document.getElementById('greeting')
+
 const states = []
 
 addStateBtn.addEventListener('click', () => {
@@ -8,7 +10,9 @@ addStateBtn.addEventListener('click', () => {
 })
 
 proceedBtn.addEventListener('click', () => {
-    const data = {}
+    const data = {
+        greeting_message: greetingInp.value.trim()
+    }
     states.forEach((S) => {
         data[`S${S.Sindex}`] = S.extractData()
     })

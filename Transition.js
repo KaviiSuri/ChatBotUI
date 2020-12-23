@@ -4,7 +4,6 @@ class Transition {
         this.Tindex = Tindex
         this.id = `S${this.Sindex}-T${this.Tindex}`
         this.data = {
-            greet: "",
             message: "",
             keywords: "",
             end: '',

@@ -9,16 +9,20 @@ class State {
         this.el = document.createElement('div')
         this.el.id = this.id;
         this.el.classList.add('state')
+
+
         const header = document.createElement('div')
         header.classList.add('state-head')
         const heading = document.createElement('h1')
         heading.innerText = `State ${this.Sindex}`
         header.appendChild(heading)
+        
         const addTransBtn = document.createElement('button')
         addTransBtn.classList.add('add-trans-btn') 
         addTransBtn.innerText = 'Add Transition'
         addTransBtn.addEventListener('click', this.addTransition)
         header.appendChild(addTransBtn)
+        
         this.el.appendChild(header)
         // place into the states div
         document.getElementById('states').appendChild(this.el)
